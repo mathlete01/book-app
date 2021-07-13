@@ -1,0 +1,28 @@
+/* by Element */
+
+h1 {
+  font-size: 20px;
+}
+
+p {
+  color: blue;
+}
+
+div {
+  margin: 10px;
+  background-color: orange;
+}
+
+/* by Class */
+
+.container {
+  margin: 50px;
+  background-color: green;
+}
+
+/* by ID */
+
+#paragraph1 {
+  color: red;
+  font-size: 16px;
+}
