@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Functions
 
   function showQueen(queen) {
+    showPanel.innerHTML = "";
     // Create DOM elements
     let image = document.createElement("img");
     let quote = document.createElement("p");
@@ -23,9 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
     quote.innerText = queen.quote;
     chooseBtn.innerText = "Choose";
     // Append newly created and filled DOM elements to the show panel
-    showPanel.appendChild(image);
-    showPanel.appendChild(quote);
-    showPanel.appendChild(chooseBtn);
+    showPanel.append(queen.name);
+    showPanel.append(chooseBtn);
+    showPanel.append(quote);
+    showPanel.append(image);
   }
 
   function createList(queens) {
@@ -37,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let queen = queens[i];
       // Create a list item
       let li = document.createElement("li");
-      li.addEventListener("click", () => showqueen(queen));
+      li.addEventListener("click", () => showQueen(queen));
       // Change the list item's text to the element's name
       li.innerText = queen.name;
       // Attach that newly created list item to the list

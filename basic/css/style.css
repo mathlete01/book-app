@@ -1,5 +1,10 @@
 /* by Element */
 
+/* body {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+} */
+
 h1 {
   font-size: 20px;
 }
@@ -9,15 +14,31 @@ p {
 }
 
 div {
-  margin: 10px;
-  background-color: orange;
+  /* background-color: orange; */
 }
 
 /* by Class */
 
 .container {
-  margin: 50px;
-  background-color: green;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
+  /* background-color: green; */
+}
+
+.container > div {
+  flex: 1;
+}
+
+.list {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.content {
+  grid-column: 2;
+  grid-row: 1;
 }
 
 /* by ID */
